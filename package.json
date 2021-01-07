@@ -1,0 +1,33 @@
+{
+  "name": "tweet-to-pic-api",
+  "version": "0.0.1",
+  "description": "API for converting Twitter tweets to images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohanprasadofficial/tweet-to-pic-api.git"
+  },
+  "keywords": [
+    "tweet-to-pic",
+    "twitter",
+    "twitter-avatar",
+    "tweets"
+  ],
+  "author": "Rohan Prasad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohanprasadofficial/tweet-to-pic-api/issues"
+  },
+  "homepage": "https://github.com/rohanprasadofficial/tweet-to-pic-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
