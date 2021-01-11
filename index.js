@@ -8,9 +8,10 @@ const fs = require("fs");
 const grapTweet = async (link, res, options) => {
   const iPhone = puppeteer.devices["iPhone 6"];
   let cutY = 130;
-  if (options.timeline) cutY = cutY - 30;
-  if (options.stats) cutY = cutY - 50;
-  if (options.actions) cutY = cutY - 50;
+  if (options.timeline === "true" || options.timeline === true)
+    cutY = cutY - 30;
+  if (options.stats === "true" || options.stats === true) cutY = cutY - 50;
+  if (options.actions === "true" || options.actions === true) cutY = cutY - 50;
 
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
@@ -59,9 +60,12 @@ App.get("/", (req, res) => {
 
 App.get("/image", (req, res) => {
   const options = {
-    actions: req.query.timeline && req.query.stats && req.query.actions,
-    stats: req.query.timeline && req.query.stats,
-    timeline: req.query.timeline,
+    actions:
+      req.query.timeline == "true" &&
+      req.query.stats == "true" &&
+      req.query.actions == "true",
+    stats: req.query.timeline == "true" && req.query.stats == "true",
+    timeline: req.query.timeline == "true",
   };
   console.log(options);
   if (req.query.link) grapTweet(req.query.link, res, options);
