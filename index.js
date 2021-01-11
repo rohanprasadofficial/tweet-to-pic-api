@@ -4,6 +4,7 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const uuidv4 = require("uuid").v4;
 const fs = require("fs");
+var cors = require("cors");
 
 const grapTweet = async (link, res, options) => {
   const iPhone = puppeteer.devices["iPhone 6"];
@@ -42,7 +43,7 @@ const grapTweet = async (link, res, options) => {
     },
   });
   const tempPath = path.join(__dirname, `temp/${tempImageId}.png`);
-  res.download(tempPath);
+  res.sendFile(tempPath);
   await browser.close();
 
   fs.unlink(tempPath, (err) => {
@@ -53,6 +54,8 @@ const grapTweet = async (link, res, options) => {
     console.log("File removed");
   });
 };
+
+App.use(cors());
 
 App.get("/", (req, res) => {
   res.send("Everything is working good.");
