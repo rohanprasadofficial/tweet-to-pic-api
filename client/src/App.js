@@ -131,8 +131,8 @@ const App = () => {
 
         <img id="resimg" height="450" width="450" alt="resimage" />
         <small style={{ margin: "1rem auto" }}>
-          Image may look distorted here , but will be available in good quality
-          after download.
+          Image may look distorted in preview , but will be available in good
+          quality after download.
         </small>
         {res ? (
           <button onClick={downloadImage}>Download Tweet Image</button>
