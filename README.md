@@ -38,21 +38,24 @@ Suppose the tweet url is : `https://twitter.com/rohanpdofficial/status/134101932
    API URL : `https://your-deployment.herokuapp.com/image?link=https://twitter.com/rohanpdofficial/status/1341019325474344968`
 
 ![default](https://raw.githubusercontent.com/rohanprasadofficial/tweet-to-pic-api/main/assets/1.png)
-
+<br/>
 2. Getting image with date & time :
    API URL : `https://your-deployment.herokuapp.com/image?link=https://twitter.com/rohanpdofficial/status/1341019325474344968&timeline=true`
 
 ![tweet with datetime](https://raw.githubusercontent.com/rohanprasadofficial/tweet-to-pic-api/main/assets/2.png)
+<br/>
 
 3. Getting image with date & time & stats :
    API URL : `https://your-deployment.herokuapp.com/image?link=https://twitter.com/rohanpdofficial/status/1341019325474344968&timeline=true&stats=true`
 
    ![tweet with datetime & stats](https://raw.githubusercontent.com/rohanprasadofficial/tweet-to-pic-api/main/assets/3.png)
+<br/>
 
 4. Getting image with date & time & stats & actions:
    API URL : `https://your-deployment.herokuapp.com/image?link=https://twitter.com/rohanpdofficial/status/1341019325474344968&timeline=true&stats=true&actions=true`
 
 ![tweet with datetime & stats & actions](https://raw.githubusercontent.com/rohanprasadofficial/tweet-to-pic-api/main/assets/4.png)
+<br/>
 
 &nbsp;
 
