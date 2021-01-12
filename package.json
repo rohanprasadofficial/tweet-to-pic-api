@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "API for converting Twitter tweets to images.",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.1.0",
+    "npm": ">=6.14.6"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
