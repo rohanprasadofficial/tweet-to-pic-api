@@ -82,16 +82,16 @@ App.get("/image", (req, res) => {
   else res.send("No link provided in query");
 });
 
-App.use(express.static(path.join(__dirname, "./client/build")));
+App.use(express.static(path.join(__dirname, "client", "build")));
 App.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 App.get("/*", (req, res) => {
   res.send("404 - Not found");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5500;
 
 App.listen(PORT, () => {
   console.log(`Server is listening at ${PORT}`);
