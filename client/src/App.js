@@ -52,6 +52,7 @@ const App = () => {
             setResURL(imageURL);
             setRes(true);
           } else {
+            console.log(response);
             alert(
               "something went wrong , please ensure link is correct & public"
             );
