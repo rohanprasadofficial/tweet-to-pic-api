@@ -58,7 +58,8 @@ const grapTweet = async (link, res, options) => {
       console.log("File removed");
     });
   } catch (err) {
-    res.status(500).send("Something went wrong , please check the link");
+    console.log(err);
+    res.status(500).send(err);
   }
 };
 
