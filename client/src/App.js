@@ -34,7 +34,7 @@ const App = () => {
       if (STcheckBox.checked) stChecked = true;
       if (ACcheckBox.checked) acChecked = true;
 
-      let url = `http://localhost:5500/image?link=${linkInput.value}&timeline=${dtChecked}&stats=${stChecked}&actions=${acChecked}`;
+      let url = `/image?link=${linkInput.value}&timeline=${dtChecked}&stats=${stChecked}&actions=${acChecked}`;
       console.log(url);
       axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
       axios
