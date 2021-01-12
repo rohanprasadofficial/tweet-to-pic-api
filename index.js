@@ -38,8 +38,8 @@ const grapTweet = async (link, res, options) => {
     const bounding_box = await hrefElement.boundingBox();
 
     const tempImageId = uuidv4();
-    console.log(cutY);
-    console.log(bounding_box.height, page.viewport().height);
+    // console.log(cutY);
+    // console.log(bounding_box.height, page.viewport().height);
     await hrefElement.screenshot({
       path: `temp/${tempImageId}.png`,
       clip: {
