@@ -16,7 +16,10 @@ const grapTweet = async (link, res, options) => {
     if (options.actions === "true" || options.actions === true)
       cutY = cutY - 50;
 
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ["--no-sandbox"],
+    });
     const page = await browser.newPage();
 
     await page.emulate(iPhone);
